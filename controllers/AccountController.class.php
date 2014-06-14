@@ -20,7 +20,7 @@ class AccountController extends AbstractController {
         }
         if($session) {
             // Logged in
-            $_SESSION['user'] = $session;
+            $_SESSION['user'] = serialize($session);
             header('Location: ' . self::$router->generate('home'));
         } else {
             echo 'Login error (who cares, this is a hack together...)';

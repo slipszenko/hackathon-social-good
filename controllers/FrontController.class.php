@@ -13,7 +13,12 @@ class FrontController extends AbstractController {
             self::$smarty->assign('loginURL', $helper->getLoginUrl());
             self::$smarty->display('front/login.tpl');
         } else {
-            
+            $session = unserialize($_SESSION['user']);
+            $request = new F\FacebookRequest($session, 'GET', '/me');
+            $response = $request->execute();
+            $user = $response->getGraphObject();
+
+            self::$smarty->assign('name', $user->getProperty('name'));
             self::$smarty->display('front/home.tpl');
         }
     }
