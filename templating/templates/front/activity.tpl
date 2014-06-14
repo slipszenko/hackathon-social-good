@@ -1,31 +1,6 @@
 {extends file="base.tpl"}
 
 {block name=content}
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header main">
-                <a class="navbar-brand" href="#">
-                    <img width="150px" height="50px" src="/media/images/logo.png" alt="">
-                </a>
-            </div>
-            <div class="navbar-header user row">
-                    <a class="col-xs-4" href="#">
-                        <i class="fa fa-user"></i><span>Perfil</span>
-                    </a>
-                     <a class="col-xs-4"  href="#">
-                        <i class="fa fa-list"></i><span>Actividades</span>
-                    </a>
-                     <a class="col-xs-4" href="#">
-                        <i class="fa fa-comment-o"></i><span>Muro</span>
-                    </a>
-            </div>
-        </div>
-        <header class="header-main">
-            Proximas actividades
-        </header>
-    </nav>
-
     <div>
         <ul class="media-list">
             {foreach item=activity from=$activities}
