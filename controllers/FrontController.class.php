@@ -27,14 +27,9 @@ class FrontController extends AbstractController {
         self::$smarty->display('front/stuff.tpl');
     }
 
-<<<<<<< HEAD
     public static function activities(){
-        //self
         self::$smarty->assign('activities', Activities::getAll());
-=======
-    public static function activities() {
         self::$smarty->display('front/activity.tpl');
->>>>>>> a8b69f33c6ec42511611a9257e19c1b20e9b14b7
     }
 
     public static function activityprofile($id){
