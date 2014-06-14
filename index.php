@@ -11,6 +11,9 @@ $router = new AltoRouter();
 // Front router
 $router->map('GET', '/', 'Front#home', 'home');
 
+$router->map('GET|POST', '/account/facebookRedirect/', 'Account#facebookRedirect', 'facebookRedirect');
+$router->map('GET|POST', '/account/logout/', 'Account#logout', 'logout');
+
 $router->map('GET|POST', '/api/v1/conference', 'APIV1#conference', 'apiConference');
 
 // Catch all error route

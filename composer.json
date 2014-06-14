@@ -3,6 +3,7 @@
         "smarty/smarty" : "dev-trunk",
         "altorouter/altorouter": "dev-master",
         "phpmailer/phpmailer" : "dev-master",
-        "phpunit/phpunit" : "4.1.*"
+        "phpunit/phpunit" : "4.1.*",
+        "facebook/php-sdk-v4" : "4.0.*"
     }
 }

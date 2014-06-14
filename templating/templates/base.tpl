@@ -19,10 +19,10 @@
     {block name=head}{/block}
 </head>
 <body>
-    <h1>Inspria-t</h1>
+    <div class="container">
+        <h1>Inspria-t</h1>
 
-   {messages}
-   <div class="container">
+        {messages}
     
         {block name=content}{/block}
     </div>

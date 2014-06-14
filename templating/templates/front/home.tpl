@@ -1,5 +1,6 @@
 {extends file="base.tpl"}
 
 {block name=content}
-    <p>Home page content</p>
+    <p>You are logged in! Whooooo</p>
+    <p><a href="{reverser name=logout}">Logout</a></p>
 {/block}

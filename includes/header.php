@@ -36,3 +36,5 @@ require('includes/smarty-plugins/function.messages.php');
 $smarty->registerPlugin('function', 'messages', 'smarty_function_messages');
 require('includes/smarty-plugins/function.reverser.php');
 $smarty->registerPlugin('function', 'reverser', 'smarty_function_reverser');
+
+Facebook\FacebookSession::setDefaultApplication($config['fb']['id'], $config['fb']['secret']);
