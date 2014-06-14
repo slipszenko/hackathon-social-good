@@ -6,7 +6,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header main">
                 <a class="navbar-brand" href="#">
-                    <img src="http://placehold.it/150x50&text=Logo" alt="">
+                    <img width="150px" height="50px" src="/media/images/logo.png" alt="">
                 </a>
             </div>
             <div class="navbar-header user row">
