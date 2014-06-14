@@ -1,9 +1,9 @@
 <?php
 
 class Activity extends AbstractModel {
-    public $id, $name, $startDate, $endDate, $location, $latitude, $longitude, $category, $picture;
+    public $id, $name, $description, $startDate, $endDate, $location, $latitude, $longitude, $category, $picture;
 
-    public function __construct($activityID = null) {
+    public function __construct($activityID) {
         parent::__construct();
         $this->id = intval($activityID);
 
@@ -19,8 +19,9 @@ class Activity extends AbstractModel {
             $this->location = $actInfo['location'];
             $this->latitude = $actInfo['latitude'];
             $this->longitude = $actInfo['longitude'];
-            $this->category = $actInfo['category'] == 1;
+            $this->category = $actInfo['category'];
             $this->picture = $actInfo['picture'];
+            $this->description = $actInfo['description'];
         }
     }
 
@@ -31,7 +32,7 @@ class Activity extends AbstractModel {
     // Factory methods
     public static function getAll() {
         self::init();
-        $activityQuery = self::$db->query('SELECT id FROM activities ORDER BY id start_date');
+        $activityQuery = self::$db->query('SELECT id FROM activities ORDER BY start_date DESC');
         $activities = array();
         while($row = $activityQuery->fetch(PDO::FETCH_ASSOC)) {
             $activities[] = new Activity($row['id']);
