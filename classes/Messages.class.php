@@ -15,7 +15,7 @@ class Messages {
     }
 
     public static function addErrorMessage($text) {
-        self::addMessage('error', $text);
+        self::addMessage('danger', $text);
     }
 
     public static function addSuccessMessage($text) {

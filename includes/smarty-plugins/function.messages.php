@@ -11,7 +11,7 @@
 function smarty_function_messages($params, $template) {
     $messageHTML = '';
     foreach(Messages::getMessages() as $message) {
-        $messageHTML .= '<div class="' . $message['class'] . '">' . $message['text'] . '</div>';
+        $messageHTML .= '<div class="alert alert-' . $message['class'] . '">' . $message['text'] . '</div>';
     }
     return $messageHTML;
 }
