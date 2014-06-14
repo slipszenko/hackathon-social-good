@@ -13,6 +13,15 @@ $router->map('GET', '/', 'Front#home', 'home');
 
 $router->map('GET|POST', '/account/facebookRedirect/', 'Account#facebookRedirect', 'facebookRedirect');
 $router->map('GET|POST', '/account/logout/', 'Account#logout', 'logout');
+$router->map('GET|POST', '/stuff/', 'Front#stuff', 'stuff');
+
+$router->map('GET|POST', '/activities/', 'Front#activities', 'activities');
+$router->map('GET|POST', '/activities/[i:id]', 'Front#activityprofile', 'activityprofile');
+$router->map('GET|POST', '/profile/[i:id]', 'Front#userProfile', 'profile');
+$router->map('GET|POST', '/wall/', 'Front#wall', 'wall');
+$router->map('GET', '/register/', 'Front#register', 'registerform');
+$router->map('POST', '/register/', 'Front#register', 'registerparse');
+
 
 $router->map('GET|POST', '/api/v1/conference', 'APIV1#conference', 'apiConference');
 
