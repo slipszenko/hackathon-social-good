@@ -28,14 +28,15 @@ class FrontController extends AbstractController {
     }
 
     public static function activities(){
-
+        //self
+        self::$smarty->assign('activities', Activities::getAll());
     }
 
     public static function activityprofile($id){
-
+        self::$smarty->assign('activity', new Activity($id));
     }
 
     public static function profile($id){
-
+        self::$smarty->assign('profile', new Profile($id));
     }
 }
