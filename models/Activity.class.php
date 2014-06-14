@@ -3,7 +3,7 @@
 class Activity extends AbstractModel {
     public $id, $name, $location, $category, $picture;
 
-    public function __construct($activityID = null) {
+    public function __construct($activityID) {
         parent::__construct();
         $this->id = intval($activityID);
 
