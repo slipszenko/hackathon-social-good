@@ -6,14 +6,11 @@ session_start();
 require('controllers/AbstractController.class.php');
 
 // Set up a connection to the database
-/*
 $db = new PDO('mysql:host=' . $config['database']['host'] . ';dbname=' . $config['database']['name'],
     $config['database']['user'],
     $config['database']['pass'],
     array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
 );
-*/
-$db = null;
 
 // Import libraries through composer
 require('vendor/autoload.php');
