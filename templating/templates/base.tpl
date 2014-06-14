@@ -35,13 +35,13 @@
                     </a>
                 </div>
                 <div class="navbar-header user row">
-                        <a class="col-xs-4" href="#">
+                        <a class="col-xs-4" href="#" {if $smarty.server.REQUEST_URI == "/profile/" } style="color:black !important;" {/if}>
                             <i class="fa fa-user"></i><span>Perfil</span>
                         </a>
-                         <a class="col-xs-4"  href="#">
+                         <a class="col-xs-4"  href="#" {if $smarty.server.REQUEST_URI == "/activities/" } style="color:black !important;" {/if}>
                             <i class="fa fa-list"></i><span>Actividades</span>
                         </a>
-                         <a class="col-xs-4" href="#">
+                         <a class="col-xs-4" href="#" {if $smarty.server.REQUEST_URI == "/wall/" } style="color:black !important;" {/if}>
                             <i class="fa fa-comment-o"></i><span>Muro</span>
                         </a>
                 </div>
