@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Inspria-t</h1>
+        <h1>Inspira-t</h1>
 
         {messages}
     
