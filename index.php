@@ -11,7 +11,7 @@ $router = new AltoRouter();
 // Front router
 $router->map('GET', '/', 'Front#home', 'home');
 
-$fouter->map('POST', '/api/v1/conference', 'APIV1#conference', 'apiConference');
+$router->map('GET|POST', '/api/v1/conference', 'APIV1#conference', 'apiConference');
 
 // Catch all error route
 $router->map('GET|POST', '*', 'ErrorPages#show404', 'show404');
