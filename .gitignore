@@ -1,4 +1,4 @@
 .DS_Store
-config.php
+includes/config.php
 composer.lock
 vendor/

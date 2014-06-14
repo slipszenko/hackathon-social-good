@@ -1,5 +1,8 @@
 {
     "require" : {
-        "facebook/php-sdk-v4" : "4.0.*"
+        "smarty/smarty" : "dev-trunk",
+        "altorouter/altorouter": "dev-master",
+        "phpmailer/phpmailer" : "dev-master",
+        "phpunit/phpunit" : "4.1.*"
     }
 }

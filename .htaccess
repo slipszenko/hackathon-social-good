@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !(media) [NC]
+RewriteRule . index.php [L]
