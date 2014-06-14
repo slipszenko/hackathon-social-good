@@ -21,6 +21,18 @@ class AccountController extends AbstractController {
         if($session) {
             // Logged in
             $_SESSION['user'] = serialize($session);
+
+            $request = new F\FacebookRequest($session, 'GET', '/me');
+            $response = $request->execute();
+            $userObj = $response->getGraphObject();
+            try {
+                $user = User::getByFacebookID($userObj->getProperty('id'));
+            } catch(NoSuchException $e) {
+                // Register a new user
+                $user = null;
+            }
+            //$_SESSION['userID'] = $user->id;
+
             header('Location: ' . self::$router->generate('home'));
         } else {
             echo 'Login error (who cares, this is a hack together...)';

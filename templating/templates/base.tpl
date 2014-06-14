@@ -12,16 +12,18 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
+    <!-- Add custom CSS here -->
+    <link href="/media/css/inspira.css" rel="stylesheet">
+    <link href="/media/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="/media/css/main.css">
+
     {block name=head}{/block}
 </head>
 <body>
     <div class="container">
-        <h1>Inspira-t</h1>
-
         {messages}
     
         {block name=content}{/block}
